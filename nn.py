@@ -12,6 +12,10 @@ class Module:
         return []
     
 class Neuron(Module):
+    #Parameters:
+    # - nin (int): The number of input connections (features) to this neuron.
+   # - nonlin (bool): If True, applies the ReLU activation function; 
+                     #if False, keeps the neuron linear.
 
     def __init__(self, nin, nonlin=True):
         self.w = [Value(random.uniform(-1,1)) for _ in range(nin)]
