@@ -14,7 +14,7 @@ n = MLP(3, [4, 4, 1])
 
 # Training loop
 for k in range(20):
-    # Forward pass
+    # this is Forward pass
     ypred = [n(x) for x in xs]
     # Calculate loss as a Value object
     loss = sum((yout - ygt) ** 2 for ygt, yout in zip(ys, ypred))
